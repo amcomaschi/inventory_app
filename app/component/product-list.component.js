@@ -12,19 +12,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by amcomaschi on 22/07/16.
  */
 var core_1 = require('@angular/core');
+var events_1 = require('events');
 /**
  * @ProductsList: A component for rendering all ProductRows and
  * storing the currently selected Product
  */
 var ProducListComponent = (function () {
     function ProducListComponent() {
+        this.onProductSelected = new events_1.EventEmitter();
     }
+    ProducListComponent.prototype.clicked = function (product) {
+        this.currentProduct = product;
+        this.onProductSelected.emit(product);
+    };
+    ProducListComponent.prototype.isSelected = function (product) {
+        if (!product || !this.currentProduct) {
+            return false;
+        }
+        return product.sku === this.currentProduct.sku;
+    };
     ProducListComponent = __decorate([
         core_1.Component({
             selector: 'product-list',
-            directives: [ProductRow],
+            directives: [ProductRowComponent],
             outputs: ['onProductSelected'],
-            template: "\n    \n    \n    \n    "
+            inputs: ['productList'],
+            template: "\n        <div class=\"ui items\">\n            <product-row\n                *ngFor=\"let p of productList\"\n                [product]=\"p\"\n                (click)='clicked(p)'\n                [class.selected]=\"isSelected(p)\">\n            </product-row>\n        </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], ProducListComponent);
