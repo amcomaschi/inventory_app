@@ -12,7 +12,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by amcomaschi on 22/07/16.
  */
 var core_1 = require('@angular/core');
-var events_1 = require('events');
 var product_row_component_1 = require('./product-row.component');
 /**
  * @ProductsList: A component for rendering all ProductRows and
@@ -20,7 +19,7 @@ var product_row_component_1 = require('./product-row.component');
  */
 var ProducListComponent = (function () {
     function ProducListComponent() {
-        this.onProductSelected = new events_1.EventEmitter();
+        this.onProductSelected = new core_1.EventEmitter();
     }
     ProducListComponent.prototype.clicked = function (product) {
         this.currentProduct = product;

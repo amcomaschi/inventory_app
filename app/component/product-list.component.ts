@@ -1,8 +1,7 @@
 /**
  * Created by amcomaschi on 22/07/16.
  */
-import { Component } from '@angular/core';
-import { EventEmitter } from 'events';
+import { Component, EventEmitter } from '@angular/core';
 
 import { Product } from '../model/Product';
 import { ProductRowComponent } from './product-row.component';

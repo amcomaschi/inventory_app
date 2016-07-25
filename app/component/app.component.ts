@@ -12,7 +12,7 @@ import { ProducListComponent } from './product-list.component';
     template: `
         <div> 
             <product-list 
-                          [producList]="products"
+                          [productList]="products"
                           (onProductSelected)="productWasSelected($event)">            
             </product-list>
         </div>
@@ -26,10 +26,11 @@ export class AppComponent{
     constructor(){
         this.products = [
             new Product(
-            'MYSHOES', 'Black Running Shoes',
+            'MYSHOES', 'Black Hat',
             '/resources/images/products/black-shoes.jpg',
             ['Men', 'Shoes', 'Running Shoes'],
-            109.99),
+            109.99)
+        ,
             new Product(
                 'NEATOJACKET', 'Blue Jacket',
                 '/resources/images/products/blue-jacket.jpg',

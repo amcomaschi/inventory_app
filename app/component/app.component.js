@@ -17,7 +17,7 @@ var product_list_component_1 = require('./product-list.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.products = [
-            new Product_1.Product('MYSHOES', 'Black Running Shoes', '/resources/images/products/black-shoes.jpg', ['Men', 'Shoes', 'Running Shoes'], 109.99),
+            new Product_1.Product('MYSHOES', 'Black Hat', '/resources/images/products/black-shoes.jpg', ['Men', 'Shoes', 'Running Shoes'], 109.99),
             new Product_1.Product('NEATOJACKET', 'Blue Jacket', '/resources/images/products/blue-jacket.jpg', ['Women', 'Apparel', 'Jackets & Vests'], 238.99),
             new Product_1.Product('NICEHAT', 'A Nice Black Hat', '/resources/images/products/black-hat.jpg', ['Men', 'Accessories', 'Hats'], 29.99)];
     }
@@ -28,7 +28,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'inventory-app',
             directives: [product_list_component_1.ProducListComponent],
-            template: "\n        <div> \n            <product-list \n                          [producList]=\"products\"\n                          (onProductSelected)=\"productWasSelected($event)\">            \n            </product-list>\n        </div>\n    "
+            template: "\n        <div> \n            <product-list \n                          [productList]=\"products\"\n                          (onProductSelected)=\"productWasSelected($event)\">            \n            </product-list>\n        </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
