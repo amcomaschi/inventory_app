@@ -5,7 +5,9 @@
 import { Component } from '@angular/core';
 
 import { Product } from '../model/Product';
-import { ProductImageComponent } from './*';
+import { ProductImageComponent } from './product-image.component';
+import { ProductDepartmentComponent } from './product-department.component';
+import { PriceDisplayComponent } from './price-display.component';
 
 /**
  * @ProductRow: A component for the view of single Product

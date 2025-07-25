@@ -22,5 +22,7 @@ import { Product } from '../model/Product';
         </div>
     `
 })
-class ProductDepartment {
+export class ProductDepartmentComponent {
+
+    product: Product;
 }

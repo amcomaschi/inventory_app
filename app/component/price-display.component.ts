@@ -15,6 +15,6 @@ import { Component } from '@angular/core';
         <div class="price-display">\${{ price }}</div>
     `
 })
-class PriceDisplay {
+export class PriceDisplayComponent {
     price:number;
 }

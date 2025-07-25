@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { EventEmitter } from 'events';
 
 import { Product } from '../model/Product';
+import { ProductRowComponent } from './product-row.component';
 
 /**
  * @ProductsList: A component for rendering all ProductRows and

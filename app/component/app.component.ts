@@ -4,10 +4,11 @@
 import { Component } from '@angular/core'
 
 import { Product } from '../model/Product';
+import { ProducListComponent } from './product-list.component';
 
 @Component({
     selector: 'inventory-app',
-    directives: [ProductsList],
+    directives: [ProducListComponent],
     template: `
         <div> 
             <product-list 

@@ -13,6 +13,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var core_1 = require('@angular/core');
 var Product_1 = require('../model/Product');
+var product_list_component_1 = require('./product-list.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.products = [
@@ -26,7 +27,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'inventory-app',
-            directives: [ProductsList],
+            directives: [product_list_component_1.ProducListComponent],
             template: "\n        <div> \n            <product-list \n                          [producList]=\"products\"\n                          (onProductSelected)=\"productWasSelected($event)\">            \n            </product-list>\n        </div>\n    "
         }), 
         __metadata('design:paramtypes', [])

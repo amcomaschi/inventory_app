@@ -17,6 +17,6 @@ import { Product } from '../model/Product';
 <img class="product-image" [src]="product.imageUrl">
 `
 })
-class ProductImageComponent {
+export class ProductImageComponent {
     product: Product;
 }
